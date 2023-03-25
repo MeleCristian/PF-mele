@@ -1,0 +1,35 @@
+@use 'variables';
+
+/* Sticky top del nav */
+.sticky-top{
+    position: sticky;
+    top:  0;
+    background-color: variables.$color_header;  
+}
+/* Configuracion del logo del nav */
+.logo-nav{
+    height: 200px;
+    width: 200px;
+}
+/* Configuracion del espaciado de nav */
+.positio-nav{
+    justify-content: space-around;
+    width: 100%;
+}
+/* Color de los links del nav */
+.positio-nav a{
+    color: white;
+}
+.navbar{
+    --bs-navbar-toggler-font-size: 2rem;
+    --bs-navbar-padding-x: 10px;
+    
+}
+/* color de los links del nav */
+.nav-link:hover{
+    color: variables.$color_verde;
+}
+/* Font size del header */
+.header{
+    font-size: variables.$fsize_header;
+}

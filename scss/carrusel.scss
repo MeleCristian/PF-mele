@@ -1,0 +1,52 @@
+@use 'variables';
+/* Padding del los elementos del carrusel */
+.carousel-inner{
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+/* Config del grid del carrusel para seprar bien el contenido de los botones */
+.grid-carrusel{
+    display: grid;
+    grid-template-columns: 0.5fr 10fr 0.5fr;
+    grid-template-rows: 10fr  1fr;
+    grid-template-areas: 
+    "izquierda medio derecha"
+    "abajo abajo abajo";
+}
+/* nombre de area */
+.carousel-inner{
+    grid-area: medio;
+}
+.carousel-control-prev{
+    grid-area: izquierda;
+}
+.carousel-control-next{
+    grid-area: derecha;
+}
+.carousel-indicators{
+    grid-area: abajo;
+    margin-bottom: 0;
+}
+
+/* Opacidad de los botones */
+.carousel-control-next{
+    width: 100%;
+    opacity: 15;
+}
+.carousel-control-prev{
+    width: 100%;
+    opacity: 15;
+}
+/* Seteo de tamanio de imagen de carrusel */
+.img_carrusel{
+    height: 400px;
+    width: 600px;
+}
+
+@media screen and (max-width:600px) {
+    .img_carrusel{
+        width:300px;
+        height: 200px;
+    }
+}

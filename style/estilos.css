@@ -1,0 +1,474 @@
+@charset "UTF-8";
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Config de altura minama del section */
+.altura-minima {
+  min-height: 80vh;
+  background-color: #511cd8;
+}
+
+/* Config del articulo purpora */
+.article_purpura {
+  background-color: #5a1eec;
+  color: white;
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+}
+
+/* config articulo verde */
+.article_verde {
+  background-color: #0ce7a9;
+  color: black;
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+}
+
+/* Config articulo blanco */
+.article_blanco {
+  background-color: white;
+  color: #5a1eec;
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+}
+
+/* Font size del p-desc */
+.p-desc {
+  font-size: 30px;
+}
+
+/* font size y weight del titulo */
+.titulo {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+/* Subrayado */
+.subrayado {
+  text-decoration: underline;
+}
+
+/* Config del boton enviar */
+.boton-enviar {
+  background-image: radial-gradient(#0ce7a9, #5a1eec);
+  color: white;
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+
+/* Config del hover del boton enviar */
+.boton-enviar:hover {
+  box-shadow: inset 0px 0px 5px rgb(0, 0, 0);
+  transition: box-shadow 0.15s ease-in-out;
+  transition: transform 0.5s;
+  transform: scale(1.2, 1.2);
+}
+
+/* Config del font size para pantallas menores a 430px */
+@media screen and (max-width: 430px) {
+  .titulo {
+    font-size: 2rem;
+  }
+  .p-desc {
+    font-size: 1rem;
+  }
+}
+/* Sticky top del nav */
+.sticky-top {
+  position: sticky;
+  top: 0;
+  background-color: #511cd8;
+}
+
+/* Configuracion del logo del nav */
+.logo-nav {
+  height: 200px;
+  width: 200px;
+}
+
+/* Configuracion del espaciado de nav */
+.positio-nav {
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* Color de los links del nav */
+.positio-nav a {
+  color: white;
+}
+
+.navbar {
+  --bs-navbar-toggler-font-size: 2rem;
+  --bs-navbar-padding-x: 10px;
+}
+
+/* color de los links del nav */
+.nav-link:hover {
+  color: #0ce7a9;
+}
+
+/* Font size del header */
+.header {
+  font-size: 20px;
+}
+
+/* INICIO Cartas cursos */
+/* Config del tamañno y posicion de las tarjetas */
+.tarjeta-cursos {
+  width: 200px;
+  height: 400px;
+  position: relative;
+  margin: 20px;
+}
+
+/* Config del titulo de las tarjetas */
+.nombre-curso {
+  height: 20%;
+  background-color: #5a1eec;
+  color: #0ce7a9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 5px;
+}
+
+/* Config del area precio de las tarjetas */
+.precio-curso {
+  height: 30%;
+  background-color: white;
+  color: #5a1eec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+}
+
+/* config del font del precio de las tarjetas*/
+.precio-curso-precio {
+  font-weight: bold;
+  font-size: 125%;
+}
+
+/* Config del area de la descripcion de las tarjetas */
+.desc-curso {
+  height: 50%;
+  background-color: #5a1eec;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+}
+
+/* Config del font del titulo de las tarjetas */
+.desc-curso-titulo {
+  font-weight: bold;
+}
+
+/* Config del boton comprar de las tarjetas */
+.desc-curso-comprar {
+  background-image: radial-gradient(#5a1eec, #0ce7a9);
+  color: white;
+  width: 70%;
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+
+/* Config del hover del boton */
+.desc-curso-comprar:hover {
+  box-shadow: inset 0px 0px 5px rgb(0, 0, 0);
+  transition: box-shadow 0.15s ease-in-out;
+  transition: transform 0.5s;
+  transform: scale(1.2, 1.2);
+}
+
+/* Config del flip de las tarjetas */
+.tarjeta-cursos-back, .tarjeta-cursos-front {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+  box-shadow: -5px 5px 20px black;
+}
+
+/* Config de la parte tracera de las tarjetas */
+.tarjeta-cursos-back {
+  transform: perspective(500px) rotateY(180deg);
+  background-color: #5a1eec;
+  color: white;
+  border: 1px solid black;
+  display: flex;
+  justify-self: center;
+  padding: 5px;
+  flex-direction: column;
+}
+
+/* Config de la parte delantera de las tarjetas */
+.tarjeta-cursos-front {
+  transform: perspective(500px) rotateY(0);
+  border: 1px solid black;
+}
+
+/* Rotacion del hover de la parte delantera de las tarjetas */
+.tarjeta-cursos:hover .tarjeta-cursos-front {
+  transform: perspective(500px) rotateY(180deg);
+}
+
+/* Rotacion del hover de la parte trasera de las tarjetas */
+.tarjeta-cursos:hover .tarjeta-cursos-back {
+  transform: perspective(500px) rotateY(360deg);
+}
+
+/* FIN cartas Cursos */
+/* INICIO Cartas teachers */
+.grid-carta { /*Seteo tamanio y distribucion de las cartas de los teachers*/
+  height: 300px;
+  width: 200px;
+  border: solid 1px black;
+  margin: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  grid-template-areas: "nombre nombre nombre" "fotito fotito fotito" "desc desc desc" "l-face l-insta l-wa";
+  background-color: #0ce7a9;
+  align-items: center;
+  justify-items: center;
+  color: #5a1eec;
+  margin: 50px;
+}
+
+/* config flex teacher */
+.flex-teacher {
+  display: flex;
+  justify-content: center;
+}
+
+.nombre { /*Seteo del nombre*/
+  grid-area: nombre;
+  border-bottom: solid 1px blue;
+  font-size: 125%;
+  font-weight: bolder;
+}
+
+.fotito { /*Seteo del tamanio de la fotito */
+  height: 100px;
+  width: 100px;
+  grid-area: fotito;
+}
+
+.desc { /*Seteo de la descripcion*/
+  grid-area: desc;
+  font-weight: bold;
+  text-align: center;
+}
+
+.l-face { /*grid area face*/
+  grid-area: l-face;
+}
+
+.l-insta { /*grid area inst*/
+  grid-area: l-insta;
+}
+
+.l-wa { /*grid area wa*/
+  grid-area: l-wa;
+}
+
+.logo-carta { /*Seteo de tamanio de logos*/
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+}
+
+/* FIN Cartas teachers */
+.footer { /*color grid area altura del footer*/
+  height: fit-content;
+  background-color: #511cd8;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.flex-footer { /*Display flex de la Ul principal del footer*/
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.flex-footer li ul { /*Seteado de los li-style*/
+  list-style: none;
+}
+
+.logo-footer { /*Seteado tamanio de logos*/
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+/*---------------------Fin FOOTER--------------------*/
+@media screen and (min-width: 768px) {
+  .flex-logo-footer {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 430px) {
+  .flex-footer {
+    display: block;
+  }
+}
+/* Padding del los elementos del carrusel */
+.carousel-inner {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Config del grid del carrusel para seprar bien el contenido de los botones */
+.grid-carrusel {
+  display: grid;
+  grid-template-columns: 0.5fr 10fr 0.5fr;
+  grid-template-rows: 10fr 1fr;
+  grid-template-areas: "izquierda medio derecha" "abajo abajo abajo";
+}
+
+/* nombre de area */
+.carousel-inner {
+  grid-area: medio;
+}
+
+.carousel-control-prev {
+  grid-area: izquierda;
+}
+
+.carousel-control-next {
+  grid-area: derecha;
+}
+
+.carousel-indicators {
+  grid-area: abajo;
+  margin-bottom: 0;
+}
+
+/* Opacidad de los botones */
+.carousel-control-next {
+  width: 100%;
+  opacity: 15;
+}
+
+.carousel-control-prev {
+  width: 100%;
+  opacity: 15;
+}
+
+/* Seteo de tamanio de imagen de carrusel */
+.img_carrusel {
+  height: 400px;
+  width: 600px;
+}
+
+@media screen and (max-width: 600px) {
+  .img_carrusel {
+    width: 300px;
+    height: 200px;
+  }
+}
+/* Config del acordion */
+.accordion {
+  --bs-accordion-bg:white;
+  --bs-accordion-border-color:none;
+  --bs-accordion-active-color:white;
+  --bs-accordion-active-bg: #5a1eec;
+  padding: 50px;
+}
+
+.accordion-body {
+  font-size: 1.2rem;
+}
+
+.accordion-button {
+  padding: 20px;
+  margin: 20px;
+}
+
+/* config del form */
+.form {
+  background-color: #1badb3;
+  color: white;
+}
+
+/* config del hover del form */
+.form-btn:hover {
+  color: #5a1eec;
+}
+
+.form-btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Config del container fluid */
+.container-fluid {
+  padding: 0;
+  --bs-gutter-x: 0rem;
+}
+
+/* Config del row para q no tenga padding */
+.row {
+  --bs-gutter-x: 0rem;
+}
+
+/* Config del center */
+.center {
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  justify-self: center;
+  justify-content: center;
+}
+
+/* Config del space-evenly */
+.space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Config del flex-container */
+.flex-container {
+  display: flex;
+  width: 100%;
+}
+
+/* Config del form */
+.form-container {
+  width: 70vw;
+}
+
+.margin {
+  margin: 20px;
+}
+
+.padding {
+  padding: 20px;
+}
+
+/*# sourceMappingURL=estilos.css.map */

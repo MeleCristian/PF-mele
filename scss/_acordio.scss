@@ -1,0 +1,17 @@
+@use 'variables';
+/* Config del acordion */
+.accordion{
+    --bs-accordion-bg:white;
+    --bs-accordion-border-color:none;
+    --bs-accordion-active-color:white;
+    --bs-accordion-active-bg: #5a1eec;
+    padding: 50px;
+}
+
+.accordion-body{
+    font-size: 1.2rem;
+}
+.accordion-button{
+    padding: 20px;
+    margin: 20px;
+}

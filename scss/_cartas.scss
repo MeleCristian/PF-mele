@@ -1,0 +1,180 @@
+@use 'variables';
+
+
+
+/* INICIO Cartas cursos */
+/* Config del tamañno y posicion de las tarjetas */
+.tarjeta-cursos{
+    width: 200px;
+    height: 400px;
+    position: relative;
+    margin: 20px;
+    
+    
+}
+/* Config del titulo de las tarjetas */
+.nombre-curso{
+    height: 20%;
+    background-color: variables.$color_purpura;
+    color:variables.$color_verde;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding: 5px;
+}
+/* Config del area precio de las tarjetas */
+.precio-curso{
+    height: 30%;
+    background-color: white;
+    color: variables.$color_purpura;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+}
+/* config del font del precio de las tarjetas*/
+.precio-curso-precio{
+    font-weight: bold;
+    font-size: 125%;
+}
+/* Config del area de la descripcion de las tarjetas */
+.desc-curso{
+    height: 50%;
+    background-color: variables.$color_purpura;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+}
+/* Config del font del titulo de las tarjetas */
+.desc-curso-titulo{
+    font-weight: bold;   
+}
+/* Config del boton comprar de las tarjetas */
+.desc-curso-comprar{
+    background-image: radial-gradient( variables.$color_purpura , variables.$color_verde );
+    color: variables.$color_blanco;
+    width: 70%;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+/* Config del hover del boton */
+.desc-curso-comprar:hover{
+    box-shadow: inset 0px 0px 5px rgb(0,0,0);
+    transition: box-shadow 0.15s ease-in-out;
+    transition: transform 0.5s;
+    transform: scale(1.2,1.2);   
+}
+
+/* Config del flip de las tarjetas */
+.tarjeta-cursos-back , .tarjeta-cursos-front{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: 1s; 
+    box-shadow: -5px 5px 20px black;
+}
+/* Config de la parte tracera de las tarjetas */
+.tarjeta-cursos-back{
+    transform: perspective(500px) rotateY(180deg);
+    background-color: variables.$color_purpura;
+    color: variables.$color_blanco;
+    border:  1px solid black;
+    display: flex;
+    justify-self: center;
+    padding: 5px;
+    flex-direction: column;   
+}
+/* Config de la parte delantera de las tarjetas */
+.tarjeta-cursos-front{
+    transform: perspective(500px) rotateY(0);
+    border:  1px solid black;
+}
+/* Rotacion del hover de la parte delantera de las tarjetas */
+.tarjeta-cursos:hover .tarjeta-cursos-front{
+    transform: perspective(500px) rotateY(180deg);
+}
+/* Rotacion del hover de la parte trasera de las tarjetas */
+.tarjeta-cursos:hover .tarjeta-cursos-back{
+    transform: perspective(500px) rotateY(360deg);
+}
+
+/* FIN cartas Cursos */
+
+/* INICIO Cartas teachers */
+.grid-carta{ /*Seteo tamanio y distribucion de las cartas de los teachers*/
+    height: 300px;
+    width: 200px;
+    border: solid 1px black;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    grid-template-areas:
+    "nombre nombre nombre"
+    "fotito fotito fotito"
+    "desc desc desc"
+    "l-face l-insta l-wa"
+    ;  
+    background-color: variables.$color_verde; 
+    align-items: center;
+    justify-items: center;
+    color: variables.$color_purpura; 
+    margin: 50px;
+}
+/* config flex teacher */
+.flex-teacher{
+    display: flex;
+    justify-content: center;
+}
+    
+.nombre{ /*Seteo del nombre*/
+    grid-area: nombre;
+    border-bottom: solid 1px blue;
+    font-size: 125%;
+    font-weight: bolder;
+}
+
+.fotito{/*Seteo del tamanio de la fotito */
+    height: 100px;
+    width: 100px;
+    grid-area: fotito;
+    
+}
+    
+.desc{/*Seteo de la descripcion*/
+    grid-area: desc;
+    font-weight: bold;
+    text-align: center;
+}
+
+.l-face{/*grid area face*/
+grid-area: l-face;
+}
+
+.l-insta{/*grid area inst*/
+    grid-area: l-insta;
+}
+
+.l-wa{/*grid area wa*/
+    grid-area: l-wa;
+}
+
+.logo-carta{/*Seteo de tamanio de logos*/
+    height: 50px;
+    width: 50px;   
+    padding: 10px;
+}
+
+/* FIN Cartas teachers */
+
+
+

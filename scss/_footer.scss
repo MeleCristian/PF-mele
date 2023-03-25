@@ -1,0 +1,47 @@
+@use 'variables';
+
+.footer{/*color grid area altura del footer*/
+    height: fit-content;
+    
+    background-color: variables.$color_header;
+    color: white;
+    font-size: variables.$fsize_header;
+    text-align: center;
+    padding: 20px;
+}
+
+.flex-footer{ /*Display flex de la Ul principal del footer*/
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.flex-footer li ul{/*Seteado de los li-style*/
+    list-style: none;
+}
+
+
+
+.logo-footer{/*Seteado tamanio de logos*/
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+
+ul{
+    margin-bottom: 0;
+}
+/*---------------------Fin FOOTER--------------------*/
+
+@media screen and (min-width:768px) {
+    .flex-logo-footer{
+        display: flex;
+        justify-content: center;    
+    }
+}
+
+@media screen and (max-width:430px){
+    .flex-footer{
+        display: block;
+    }
+}

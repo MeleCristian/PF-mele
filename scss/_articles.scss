@@ -1,0 +1,68 @@
+@use 'variables';
+/* Config de altura minama del section */
+.altura-minima{
+    min-height: 80vh;
+    background-color: variables.$color_header;
+}
+
+/* Config del articulo purpora */
+.article_purpura{
+    background-color: variables.$color_purpura;
+    color: variables.$color_blanco;
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+}
+/* config articulo verde */
+.article_verde{
+    background-color: variables.$color_verde;
+    color: variables.$color_negro;
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+}
+/* Config articulo blanco */
+.article_blanco{
+    background-color: variables.$color_blanco;
+    color: variables.$color_purpura;
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+}
+/* Font size del p-desc */
+.p-desc{
+    font-size: variables.$fsize_parrafo;
+}
+/* font size y weight del titulo */
+.titulo{
+    font-size: variables.$fsize_titulo;
+    font-weight: bold;
+}
+/* Subrayado */
+.subrayado{
+    text-decoration: underline;
+}
+/* Config del boton enviar */
+.boton-enviar{
+    background-image: radial-gradient( variables.$color_verde,variables.$color_purpura  );
+    color: variables.$color_blanco;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+/* Config del hover del boton enviar */
+.boton-enviar:hover{
+    box-shadow: inset 0px 0px 5px rgb(0,0,0);    
+    transition: box-shadow 0.15s ease-in-out;
+    transition: transform 0.5s;
+    transform: scale(1.2,1.2);
+}
+/* Config del font size para pantallas menores a 430px */
+@media screen and (max-width:430px){   
+    .titulo{
+        font-size: 2rem;
+    }
+
+    .p-desc{
+        font-size: 1rem;
+    }
+}

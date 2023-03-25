@@ -1,0 +1,15 @@
+@use 'variables';
+/* config del form */
+.form{
+    background-color: variables.$color_form;
+    color: white;
+}
+/* config del hover del form */
+.form-btn:hover{
+    color: variables.$color_purpura;
+}
+
+.form-btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
